@@ -1,0 +1,23 @@
+{
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "name": "Favorite Matrix Client",
+    "description": "Select your favorite Matrix web client for matrix.to",
+    "author": "Martin Giger",
+    "content_scripts": [
+        {
+            "matches": [ "*://matrix.to/*" ],
+            "js": [ "rewrite.js" ]
+        }
+    ],
+    "options_ui": {
+        "page": "options.html"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "icons": {
+        "48": "icon.svg",
+        "96": "icon.svg"
+    }
+}
