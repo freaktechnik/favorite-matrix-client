@@ -6,17 +6,18 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("instance").addEventListener("change", (event) => {
-        const value = event.target.value;
+        const { value } = event.target;
         browser.storage.local.set({ instance: value });
     }, {
         passive: true
     });
-    borwser.storage.local.get('instance')
+    browser.storage.local.get('instance')
         .then(({ instance }) => {
             if(instance) {
                 document.getElementById("instance").value = instance;
             }
-        });
+        })
+        .catch(console.error);
 }, {
     once: true,
     passive: true
