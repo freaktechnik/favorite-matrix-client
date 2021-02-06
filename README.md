@@ -2,6 +2,12 @@
 
 This Firefox extension rewrites matrix.to links to always link to your favorite instance of Element web.
 
+## Installation
+
+A stable release version is available here:
+
+[![addons.mozilla.org/](https://addons.cdn.mozilla.net/static/img/addons-buttons/AMO-button_2.png)](https://addons.mozilla.org/en-US/firefox/addon/favorite-matrix-client/?utm_source=github.com&utm_content=install)
+
 ## Future Improvements
 
 - Allow specifying a different instance per container
