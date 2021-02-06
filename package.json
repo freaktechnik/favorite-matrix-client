@@ -1,0 +1,31 @@
+{
+  "name": "favorite-matrix-client",
+  "version": "1.0.0",
+  "description": "Select your favorite Matrix web client for matrix.to",
+  "main": "rewrite.js",
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "npm run lint:js",
+    "lint:js": "eslint --ext js,json .",
+    "lint:webext": "web-ext lint",
+    "build": "web-ext build"
+  },
+  "author": "Martin Giger (https://humanoids.be)",
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "@freaktechnik/eslint-config-extension": "^8.0.2",
+    "eslint": "^7.19.0",
+    "web-ext": "^5.5.0"
+  },
+  "browserslist": [
+    "last 1 firefox version",
+    "Firefox ESR"
+  ],
+  "webExt": {
+    "ignoreFiles": [
+      "package.json",
+      "package-lock.json",
+      "README.md"
+    ]
+  }
+}
