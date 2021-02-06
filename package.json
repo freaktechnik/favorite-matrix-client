@@ -18,8 +18,7 @@
     "web-ext": "^5.5.0"
   },
   "browserslist": [
-    "last 1 firefox version",
-    "Firefox ESR"
+    "firefox >= 86"
   ],
   "webExt": {
     "ignoreFiles": [
