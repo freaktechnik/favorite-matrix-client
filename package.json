@@ -1,6 +1,6 @@
 {
   "name": "favorite-matrix-client",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Select your favorite Matrix web client for matrix.to",
   "main": "rewrite.js",
   "scripts": {
