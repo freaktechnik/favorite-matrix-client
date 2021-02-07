@@ -11,7 +11,7 @@ async function checkTabURL(tab) {
                 options
             ] = tab.url.split('?'),
             parsedOptions = new URLSearchParams(options),
-            { instance } = await browser.storage.local.get({ instance: 'app.element.io' });
+            { instance } = await browser.storage.sync.get({ instance: 'app.element.io' });
         if(parsedOptions.get('web-instance[element.io]') !== instance) {
             parsedOptions.set('web-instance[element.io]', instance);
             await browser.tabs.update(tab.id, {
@@ -32,4 +32,14 @@ browser.tabs.onUpdated.addListener((tabId, change, tab) => {
     }
 }, {
     urls: [ '*://matrix.to/*' ]
+});
+
+browser.runtime.onInstalled.addListener(async ({
+    previousVersion,
+    reason
+}) => {
+    if(previousVersion === '1.0.0' && reason === 'update') {
+        const { instance } = await browser.storage.local.get({ instance: 'app.element.io' });
+        await browser.storage.sync.set({ instance });
+    }
 });

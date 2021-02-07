@@ -7,11 +7,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("instance").addEventListener("change", (event) => {
         const { value } = event.target;
-        browser.storage.local.set({ instance: value });
+        browser.storage.sync.set({ instance: value });
     }, {
         passive: true
     });
-    browser.storage.local.get('instance')
+    browser.storage.sync.get('instance')
         .then(({ instance }) => {
             if(instance) {
                 document.getElementById("instance").value = instance;
