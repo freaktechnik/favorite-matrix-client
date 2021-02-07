@@ -26,5 +26,10 @@
       "package-lock.json",
       "README.md"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freaktechnik/favorite-matrix-client.git"
+  },
+  "private": true
 }
