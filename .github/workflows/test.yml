@@ -18,4 +18,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: freaktechnik/web-ext-lint@main
+      - uses: freaktechnik/web-ext-lint@v1
