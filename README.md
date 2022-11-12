@@ -6,7 +6,7 @@ This Firefox extension rewrites matrix.to links to always link to your favorite 
 
 A stable release version is available here:
 
-[![addons.mozilla.org/](https://addons.cdn.mozilla.net/static/img/addons-buttons/AMO-button_2.png)](https://addons.mozilla.org/addon/favorite-matrix-client/?utm_source=github.com&utm_content=install)
+[![addons.mozilla.org/](https://blog.mozilla.org/addons/files/2020/04/get-the-addon-fx-apr-2020.svg)](https://addons.mozilla.org/addon/favorite-matrix-client/?utm_source=github.com&utm_content=install)
 
 ## Future Improvements
 
