@@ -15,7 +15,7 @@
   "devDependencies": {
     "@freaktechnik/eslint-config-extension": "^9.0.1",
     "eslint": "^8.36.0",
-    "web-ext": "^7.5.0"
+    "web-ext": "^7.6.0"
   },
   "browserslist": [
     "firefox >= 86"
