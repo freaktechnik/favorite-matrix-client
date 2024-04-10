@@ -8,14 +8,14 @@ async function checkTabURL(tab) {
     if(tab.id && tab.url && /^https?:\/\/matrix.to\/#\//.test(tab.url)) {
         const [
                 target,
-                options
+                options,
             ] = tab.url.split('?'),
             parsedOptions = new URLSearchParams(options),
             { instance } = await browser.storage.sync.get({ instance: 'app.element.io' });
         if(parsedOptions.get('web-instance[element.io]') !== instance) {
             parsedOptions.set('web-instance[element.io]', instance);
             await browser.tabs.update(tab.id, {
-                url: `${target}?${parsedOptions.toString()}`
+                url: `${target}?${parsedOptions.toString()}`,
             });
         }
     }
@@ -31,12 +31,12 @@ browser.tabs.onUpdated.addListener((tabId, change, tab) => {
             .catch(console.error);
     }
 }, {
-    urls: [ '*://matrix.to/*' ]
+    urls: [ '*://matrix.to/*' ],
 });
 
 browser.runtime.onInstalled.addListener(async ({
     previousVersion,
-    reason
+    reason,
 }) => {
     if(previousVersion === '1.0.0' && reason === 'update') {
         const { instance } = await browser.storage.local.get({ instance: 'app.element.io' });

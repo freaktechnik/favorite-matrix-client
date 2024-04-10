@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const { value } = event.target;
         browser.storage.sync.set({ instance: value });
     }, {
-        passive: true
+        passive: true,
     });
     browser.storage.sync.get('instance')
         .then(({ instance }) => {
@@ -20,5 +20,5 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(console.error);
 }, {
     once: true,
-    passive: true
+    passive: true,
 });
