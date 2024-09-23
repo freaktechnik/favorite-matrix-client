@@ -14,7 +14,7 @@
   "license": "MPL-2.0",
   "devDependencies": {
     "@freaktechnik/eslint-config-extension": "^10.0.10",
-    "eslint": "^9.10.0",
+    "eslint": "^9.11.0",
     "web-ext": "^8.2.0"
   },
   "browserslist": [
