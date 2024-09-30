@@ -13,7 +13,7 @@
   "author": "Martin Giger (https://humanoids.be)",
   "license": "MPL-2.0",
   "devDependencies": {
-    "@freaktechnik/eslint-config-extension": "^10.0.10",
+    "@freaktechnik/eslint-config-extension": "^10.1.0",
     "eslint": "^9.11.1",
     "web-ext": "^8.3.0"
   },
