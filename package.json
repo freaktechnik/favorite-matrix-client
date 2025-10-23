@@ -18,7 +18,7 @@
     "web-ext": "^9.0.0"
   },
   "browserslist": [
-    "firefox >= 86"
+    "firefox >= 109"
   ],
   "webExt": {
     "ignoreFiles": [
