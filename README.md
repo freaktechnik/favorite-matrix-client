@@ -12,7 +12,7 @@ A stable release version is available here:
 
 - Allow specifying a different instance per container
 - Support overwriting other clients, once that's actually relevant
-- Support arbitrary web instances once that's allowed (see https://github.com/matrix-org/matrix.to/blob/dc4ccaef099b0cee625d4df6082daef50e92f9f5/src/open/clients/Element.js#L20-L24 for the hardcoded list)
+- Support arbitrary web instances once that's allowed (see https://github.com/matrix-org/matrix.to/blob/e8fcc3d2b98f308c0257117d5c1a8aeda2c98318/src/open/clients/Element.js#L21-L28 for the hardcoded list)
 - This extension will eventually be superseeded by native support from matrix.to: https://github.com/matrix-org/matrix.to/issues/197
 
 ## Does This Work in Browsers Other Than Firefox?
