@@ -1,0 +1,36 @@
+name: Update browserslist
+on:
+  schedule:
+  - cron: "15 14 * * 3"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version: latest
+          cache: 'npm'
+      - name: Update browsers list
+        run: npx --yes browserslist --update-db
+      - name: Check for Changes
+        id: check_changes
+        run: |
+          if [[ -n "$(git diff --exit-code)" ]]; then
+            echo "Changes detected."
+            echo "::set-output name=has_changes::true"
+          else
+            echo "No changes detected."
+            echo "::set-output name=has_changes::false"
+          fi
+      - name: Save updated db
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add package-lock.json
+          git commit -m "chore: bump browserslist"
+          git push origin HEAD:main
