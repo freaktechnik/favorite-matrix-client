@@ -15,7 +15,7 @@ jobs:
           node-version: latest
           cache: 'npm'
       - name: Update browsers list
-        run: npx --yes browserslist --update-db
+        run: npx --yes update-browserslist-db@latest
       - name: Check for Changes
         id: check_changes
         run: |
